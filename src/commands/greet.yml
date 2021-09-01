@@ -1,1 +1,12 @@
-
+description: >
+  # What will this command do?
+  # Descriptions should be short, simple, and clear.
+parameters:
+  greeting:
+    type: string
+    default: "Hello"
+    description: "Select a proper greeting"
+steps:
+  - run:
+      name: Hello World
+      command: echo << parameters.greeting >> world

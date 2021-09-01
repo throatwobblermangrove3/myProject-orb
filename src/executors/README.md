@@ -6,6 +6,20 @@ Executors can be used to parameterize the same environment across many jobs. Orb
 
 View the included hello.yml example.
 
+description: >
+  This is a sample executor using Docker and Node.
+docker:
+  - image: 'cimg/node:<<parameters.tag>>'
+parameters:
+  tag:
+    default: lts
+    description: >
+      Pick a specific circleci/node image variant:
+      https://hub.docker.com/r/cimg/node/tags
+    type: string
+
+
+
 See:
 
     Orb Author Intro
